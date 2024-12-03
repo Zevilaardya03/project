@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verifikasi BPJS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <h2>Verifikasi RSUA</h2>
+      </div>
+      <nav class="sidebar-menu">
+        <a href="#" class="menu-item active">Dashboard</a>
+        <a href="#" class="menu-item">Panduan Praktik Klinis</a>
+        <h3 class="menu-title">Menu Verifikasi BPJS</h3>
+        <a href="#" class="menu-item">Klaim</a>
+        <a href="#" class="menu-item">Estimasi Biaya Pasien</a>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <header class="header">
+        <h1>Dashboard</h1>
+        <a href="#" class="logout">Logout</a>
+      </header>
+
+      <section class="verification-menu">
+        <button class="button claim">Klaim</button>
+        <button class="button estimate">Estimasi Biaya Pasien</button>
+      </section>
+
+      <section class="table-section">
+        <h2>Tabel Data Perbandingan</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Nama Lengkap</th>
+              <th>No RM</th>
+              <th>No BPJS</th>
+              <th>Alamat</th>
+              <th>Total Klaim</th>
+              <th>Total Estimasi</th>
+              <th>Status</th>
+              <th>Keterangan</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Zefila Ardya Salsabila</td>
+              <td>12345</td>
+              <td>0987654321234</td>
+              <td>Kaliurang</td>
+              <td>Rp. 460.000</td>
+              <td>Rp. 259.600</td>
+              <td><span class="status in-bounds">Dalam Batas</span></td>
+              <td><input type="text" placeholder="Masukkan keterangan"></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <footer>
+        <p>&copy; 2024, made with by RSUA Tim</p>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>

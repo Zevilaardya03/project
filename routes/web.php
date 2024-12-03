@@ -32,6 +32,10 @@ Route::group(['middleware' => 'auth'], function () {
 		return view('dashboard');
 	})->name('dashboard');
 
+	Route::get('ppk', function () {
+		return view('ppk');
+	})->name('ppk');  
+
 	Route::get('profile', function () {
 		return view('profile');
 	})->name('profile');
@@ -44,10 +48,16 @@ Route::group(['middleware' => 'auth'], function () {
 		return view('laravel-examples/user-management');
 	})->name('user-management');
 
+	Route::get('user-ppk', function () {
+		return view('laravel-examples/user-ppk');
+	})->name('user-ppk');
+
     Route::get('/logout', [SessionsController::class, 'destroy']);
+	Route::get('/user-ppk', [UserProfileController::class, 'index'])->name('user-ppk');
 	Route::get('/user-profile', [UserProfileController::class, 'index'])->name('user-profile');
+	Route::post('/user-ppk', [UserProfileController::class, 'store']);
 	Route::post('/user-profile', [InfoUserController::class, 'store']);
-    Route::get('/login', function () {
+    Route::get('/login', function () { 
 		return view('dashboard');
 	})->name('sign-up');
 });
